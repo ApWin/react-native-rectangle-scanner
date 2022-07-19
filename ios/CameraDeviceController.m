@@ -113,7 +113,8 @@ Represents the input from the camera device
     if (deviceOrientation == UIDeviceOrientationFaceUp) return;
     if (deviceOrientation == UIDeviceOrientationFaceDown) return;
     if (deviceOrientation == UIDeviceOrientationUnknown) return;
-    _lastDeviceOrientation = deviceOrientation;
+    _lastDeviceOrientation = 'portrait';
+    // _lastDeviceOrientation = deviceOrientation;
 }
 
 /*!
@@ -439,13 +440,16 @@ Represents the input from the camera device
       videoOrientation = AVCaptureVideoOrientationPortrait;
       break;
     case UIInterfaceOrientationPortraitUpsideDown:
-      videoOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
+      videoOrientation = AVCaptureVideoOrientationPortrait;
+      // videoOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
       break;
     case UIInterfaceOrientationLandscapeLeft:
-      videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
+     videoOrientation = AVCaptureVideoOrientationPortrait;
+      // videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
       break;
     case UIInterfaceOrientationLandscapeRight:
-      videoOrientation = AVCaptureVideoOrientationLandscapeRight;
+     videoOrientation = AVCaptureVideoOrientationPortrait;
+      // videoOrientation = AVCaptureVideoOrientationLandscapeRight;
       break;
     default:
       videoOrientation = AVCaptureVideoOrientationPortrait;
